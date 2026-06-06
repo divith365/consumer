@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Consumer News — Natural Justice | Editor: Dr. Vinay Kumar S</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:wght@300;400;600&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --red: #C8181E;
+    --red-dark: #8B0F13;
+    --red-light: #F5E6E7;
+    --gold: #C9960A;
+    --gold-light: #FDF6E3;
+    --dark: #111111;
+    --dark2: #1E1E1E;
+    --text: #2A2A2A;
+    --muted: #666;
+    --border: #DDD;
+    --white: #FAFAFA;
+    --green: #1A5E2A;
+  }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ── TOP TICKER ── */
+  .ticker-wrap {
+    background: var(--red);
+    color: #fff;
+    padding: 6px 0;
+    overflow: hidden;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .ticker-inner {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 28s linear infinite;
+  }
+  .ticker-inner span { margin-right: 60px; }
+  .ticker-inner span::before { content: '◆ '; color: #FFD700; }
+  @keyframes ticker {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: var(--white);
+    border-bottom: 4px solid var(--red);
+    padding: 20px 5%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .masthead-rni {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .masthead-center { text-align: center; }
+
+  .masthead-logo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+
+  .scales-icon { font-size: 32px; }
+
+  .masthead-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--red);
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+
+  .masthead-subtitle {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .masthead-tagline {
+    font-family: 'Barlow Condensed', sans-serif;
+    background: var(--gold);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 3px 14px;
+    display: inline-block;
+    margin-top: 6px;
+    border-radius: 2px;
+  }
+
+  .masthead-right {
+    text-align: right;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--dark);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+  }
+
+  nav a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    padding: 12px 22px;
+    transition: all 0.15s;
+    border-bottom: 3px solid transparent;
+  }
+
+  nav a:hover, nav a.active {
+    color: #fff;
+    border-bottom-color: var(--red);
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* ── HERO SECTION ── */
+  .hero {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--red-dark) 100%);
+    padding: 60px 5%;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: 'CONSUMER NEWS';
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 180px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.03);
+    white-space: nowrap;
+    top: -30px;
+    left: -20px;
+    pointer-events: none;
+  }
+
+  .hero-text { position: relative; z-index: 1; }
+
+  .hero-kicker {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero-title em { color: var(--gold); font-style: italic; }
+
+  .hero-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    max-width: 560px;
+    margin-bottom: 28px;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.15s;
+  }
+
+  .hero-btn:hover { background: #a87a08; }
+
+  /* ── EDITOR CARD ── */
+  .editor-card {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
+  }
+
+  .editor-card-top {
+    background: var(--red);
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  .editor-card-top-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+  }
+
+  .editor-card-top-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .editor-photo-wrap {
+    padding: 20px;
+    text-align: center;
+    background: #f8f8f8;
+  }
+
+  .editor-photo {
+    width: 130px;
+    height: 160px;
+    object-fit: cover;
+    border: 4px solid var(--red);
+    display: block;
+    margin: 0 auto 14px;
+  }
+
+  .editor-photo-placeholder {
+    width: 130px;
+    height: 160px;
+    background: #ddd;
+    border: 4px solid var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    margin: 0 auto 14px;
+  }
+
+  .editor-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--red);
+    line-height: 1.2;
+  }
+
+  .editor-designation {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  .editor-card-footer {
+    background: var(--dark);
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .editor-id {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .editor-blood {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  /* ── SECTION LAYOUT ── */
+  .section {
+    padding: 60px 5%;
+  }
+
+  .section-alt { background: #F5F0EC; }
+  .section-dark { background: var(--dark2); color: #fff; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--dark);
+    line-height: 1.1;
+  }
+
+  .section-dark .section-title { color: #fff; }
+
+  .section-rule {
+    flex: 1;
+    height: 2px;
+    background: var(--red);
+    opacity: 0.3;
+  }
+
+  /* ── NEWS PHOTO SLIDER ── */
+  .news-slider-section {
+    background: var(--dark);
+    padding: 32px 5% 36px;
+    overflow: hidden;
+  }
+
+  .news-slider-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  .live-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--red);
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    animation: livePulse 1.2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.6); }
+    50% { opacity: 0.7; transform: scale(1.3); box-shadow: 0 0 0 5px rgba(255,255,255,0); }
+  }
+
+  .news-slider-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    flex: 1;
+  }
+
+  .slider-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .slider-arrow {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+  }
+
+  .slider-arrow:hover {
+    background: var(--red);
+    border-color: var(--red);
+  }
+
+  .slider-dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .slider-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    padding: 0;
+  }
+
+  .slider-dot.active {
+    background: var(--gold);
+    width: 22px;
+    border-radius: 4px;
+  }
+
+  /* SLIDER TRACK */
+  .slider-track-wrap {
+    overflow: hidden;
+  }
+
+  .slider-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+
+  .slide {
+    min-width: calc(33.333% - 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-shrink: 0;
+  }
+
+  /* ── CAMERA FRAME ── */
+  .camera-frame {
+    position: relative;
+    background: #0a0a0a;
+    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+  }
+
+  /* Corner brackets */
+  .camera-corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+  }
+
+  .camera-corner.tl { top: 8px; left: 8px; border-top: 2.5px solid var(--gold); border-left: 2.5px solid var(--gold); }
+  .camera-corner.tr { top: 8px; right: 8px; border-top: 2.5px solid var(--gold); border-right: 2.5px solid var(--gold); }
+  .camera-corner.bl { bottom: 36px; left: 8px; border-bottom: 2.5px solid var(--gold); border-left: 2.5px solid var(--gold); }
+  .camera-corner.br { bottom: 36px; right: 8px; border-bottom: 2.5px solid var(--gold); border-right: 2.5px solid var(--gold); }
+
+  /* REC badge with live glowing dot */
+  .camera-rec {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+
+  .rec-dot {
+    width: 9px;
+    height: 9px;
+    background: var(--red);
+    border-radius: 50%;
+    animation: recGlow 1.5s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes recGlow {
+    0%, 100% { box-shadow: 0 0 4px 1px rgba(200,24,30,0.8), 0 0 10px 3px rgba(200,24,30,0.4); opacity: 1; }
+    50% { box-shadow: 0 0 2px 0px rgba(200,24,30,0.3); opacity: 0.5; }
+  }
+
+  /* Image area */
+  .camera-img-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .camera-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .camera-frame:hover .camera-img-wrap img { transform: scale(1.05); }
+
+  /* Placeholder for dummy slides */
+  .slide-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.6s ease;
+  }
+
+  .camera-frame:hover .slide-placeholder { transform: scale(1.04); }
+
+  .placeholder-icon { font-size: 44px; opacity: 0.7; }
+
+  .placeholder-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* HUD strip at bottom */
+  .camera-hud {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.75);
+    padding: 5px 12px;
+    display: flex;
+    gap: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(255,201,0,0.8);
+    letter-spacing: 1px;
+    z-index: 3;
+    backdrop-filter: blur(4px);
+  }
+
+  /* Scan line overlay */
+  .camera-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.04) 2px,
+      rgba(0,0,0,0.04) 4px
+    );
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Caption */
+  .slide-caption { padding: 0 2px; }
+
+  .slide-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .slide-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .slide-meta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── SOCIAL BAR ── */
+  .social-bar {
+    background: var(--dark2);
+    border-top: 2px solid rgba(255,255,255,0.05);
+    border-bottom: 2px solid rgba(255,255,255,0.05);
+    padding: 14px 5%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .social-bar-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    margin-right: 6px;
+  }
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    color: #fff;
+  }
+
+  .social-btn:hover { transform: translateY(-2px); filter: brightness(1.15); }
+
+  .social-btn.fb { background: #1877F2; }
+  .social-btn.insta { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+  .social-btn.yt { background: #FF0000; }
+  .social-btn.wa-channel { background: #25D366; }
+
+  .social-bar-right {
+    margin-left: auto;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 1px;
+  }
+
+  /* ── SMOOTH SCROLL ── */
+  html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+
+  /* ── CREDENTIAL CARD HOVER ── */
+  .cred-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--red);
+    padding: 20px;
+    border-radius: 0 0 4px 4px;
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1),
+                box-shadow 0.25s ease,
+                border-top-color 0.25s ease,
+                background 0.25s ease;
+    cursor: default;
+  }
+
+  .cred-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(200,24,30,0.15), 0 4px 12px rgba(0,0,0,0.08);
+    border-top-color: var(--gold);
+    background: linear-gradient(160deg, #fff 70%, #FFF8EE 100%);
+  }
+
+  .cred-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .cred-card:hover .cred-icon {
+    transform: scale(1.3) rotate(-8deg);
+  }
+
+  .cred-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--red);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    transition: color 0.2s;
+  }
+
+  .cred-card:hover .cred-title { color: var(--gold); }
+
+  .cred-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    transition: color 0.2s;
+  }
+
+  .cred-card:hover .cred-desc { color: var(--text); }
+
+  /* ── ROLE ITEM HOVER ── */
+  .role-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid var(--gold);
+    padding: 16px 20px;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: background 0.2s, border-left-width 0.2s,
+                transform 0.25s cubic-bezier(0.4,0,0.2,1),
+                box-shadow 0.25s ease;
+    cursor: default;
+  }
+
+  .role-item:hover {
+    background: rgba(255,255,255,0.1);
+    border-left-width: 8px;
+    transform: translateX(6px);
+    box-shadow: 4px 0 20px rgba(201,150,10,0.2);
+  }
+
+  .role-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--gold);
+    opacity: 0.5;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 36px;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .role-item:hover .role-num {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+  .role-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+    transition: color 0.2s;
+  }
+
+  .role-item:hover .role-title { color: var(--gold); }
+
+  .role-org {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+    transition: color 0.2s;
+  }
+
+  .role-item:hover .role-org { color: rgba(255,255,255,0.75); }
+
+  /* ── CONTACT ITEM HOVER ── */
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    transition: transform 0.2s ease, background 0.2s;
+    border-radius: 4px;
+    padding-left: 6px;
+    cursor: default;
+  }
+
+  .contact-item:hover {
+    transform: translateX(6px);
+    background: var(--red-light);
+    padding-left: 12px;
+  }
+
+  .contact-item:last-child { border-bottom: none; }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--red-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .contact-item:hover .contact-icon {
+    background: var(--red);
+    transform: scale(1.1);
+  }
+
+  /* ── ABOUT GRID ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .about-text p {
+    margin-bottom: 16px;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .about-text p:last-child { margin-bottom: 0; }
+
+  .about-mission {
+    background: var(--red);
+    color: #fff;
+    padding: 28px;
+    border-radius: 4px;
+  }
+
+  .about-mission-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #FFD700;
+  }
+
+  .about-mission p {
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.9;
+    margin-bottom: 16px;
+  }
+
+  .mission-fact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .mission-fact-icon { font-size: 18px; }
+
+  /* ── CREDENTIALS ── */
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* ── ROLES ── */
+  .roles-list { display: flex; flex-direction: column; gap: 14px; }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .contact-info { }
+
+  .contact-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  .contact-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .contact-form {
+    background: var(--dark);
+    padding: 28px;
+    border-radius: 4px;
+  }
+
+  .contact-form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .form-group { margin-bottom: 14px; }
+
+  .form-group label {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #fff;
+    padding: 10px 14px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 14px;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+
+  .form-group textarea { height: 90px; resize: vertical; }
+
+  .form-submit {
+    background: var(--red);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.15s;
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  .form-submit:hover { background: var(--red-dark); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0A0A0A;
+    padding: 32px 5%;
+    text-align: center;
+    border-top: 4px solid var(--red);
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--red);
+    margin-bottom: 6px;
+  }
+
+  .footer-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.15s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.2);
+  }
+
+  .footer-dev {
+    margin-top: 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.4px;
+  }
+
+  .footer-dev a {
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .footer-dev a:hover { color: var(--gold); }
+
+  /* ── SCROLL PROGRESS ── */
+  #scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--red), var(--gold));
+    z-index: 9999;
+    transition: width 0.08s linear;
+    box-shadow: 0 0 8px rgba(200,24,30,0.5);
+  }
+
+  /* ── LANGUAGE SWITCHER ── */
+  .lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border: 2px solid var(--red);
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .lang-btn {
+    padding: 5px 13px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--red);
+    transition: all 0.15s;
+    text-transform: uppercase;
+  }
+
+  .lang-btn.active {
+    background: var(--red);
+    color: #fff;
+  }
+
+  .lang-btn:hover:not(.active) {
+    background: var(--red-light);
+  }
+
+  /* ── FLOATING BUTTONS ── */
+  .floating-btns {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    z-index: 999;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+  }
+
+  .float-btn {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    text-decoration: none;
+    padding: 0;
+    width: 52px;
+    overflow: hidden;
+    transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+    cursor: pointer;
+    border: none;
+    position: relative;
+  }
+
+  .float-btn:hover { width: 190px; }
+
+  .float-btn-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .float-btn-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    padding-right: 16px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .float-btn:hover .float-btn-label { opacity: 1; }
+
+  .float-btn.whatsapp {
+    background: #25D366;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .float-btn.call {
+    background: var(--red);
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .float-btn.sms {
+    background: #0072C6;
+    color: #fff;
+  }
+
+  /* ── PAGE LOADER ── */
+  #pageLoader {
+    position: fixed;
+    inset: 0;
+    background: var(--dark);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+  }
+
+  #pageLoader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .loader-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--red);
+    letter-spacing: -0.5px;
+    animation: loaderPulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes loaderPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .loader-tagline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .loader-bar-wrap {
+    width: 200px;
+    height: 3px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .loader-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--red), var(--gold));
+    border-radius: 10px;
+    animation: loaderFill 1.8s cubic-bezier(0.4,0,0.2,1) forwards;
+  }
+
+  @keyframes loaderFill {
+    0% { width: 0%; }
+    60% { width: 75%; }
+    100% { width: 100%; }
+  }
+
+  .loader-dots {
+    display: flex;
+    gap: 7px;
+  }
+
+  .loader-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    animation: loaderDot 1.2s ease-in-out infinite;
+  }
+
+  .loader-dot:nth-child(2) { animation-delay: 0.2s; }
+  .loader-dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes loaderDot {
+    0%, 100% { background: rgba(255,255,255,0.15); transform: scale(1); }
+    50% { background: var(--gold); transform: scale(1.4); }
+  }
+
+  /* ── TYPEWRITER ── */
+  .typewriter-wrap {
+    display: inline;
+  }
+
+  .typewriter-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-left: 3px;
+    animation: cursorBlink 0.8s step-end infinite;
+  }
+
+  @keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* ── HERO TITLE HOVER ── */
+  .hero-title {
+    cursor: default;
+  }
+
+  .hero-title .word {
+    display: inline-block;
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  .hero-title .word:hover {
+    color: var(--gold);
+    transform: translateY(-3px) scale(1.04);
+  }
+
+  /* ── EDITOR CARD HOVER ── */
+  .editor-card {
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s ease;
+    cursor: default;
+  }
+
+  .editor-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 0 0 2px var(--gold);
+  }
+
+  .editor-card:hover .editor-card-top {
+    background: linear-gradient(135deg, var(--red-dark), var(--red));
+  }
+
+  .editor-photo-placeholder {
+    transition: transform 0.3s ease;
+  }
+
+  .editor-card:hover .editor-photo-placeholder {
+    transform: scale(1.05);
+  }
+
+  /* ── ABOUT TEXT HOVER ── */
+  .about-text p {
+    transition: color 0.2s;
+    border-left: 3px solid transparent;
+    padding-left: 10px;
+    transition: border-color 0.3s, padding-left 0.3s, color 0.3s;
+  }
+
+  .about-text p:hover {
+    border-left-color: var(--red);
+    padding-left: 16px;
+    color: var(--dark);
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .masthead { grid-template-columns: 1fr; text-align: center; }
+    .masthead-right { text-align: center; }
+    .hero { grid-template-columns: 1fr; }
+    .editor-card { max-width: 320px; margin: 0 auto; }
+    .about-grid { grid-template-columns: 1fr; }
+    .credentials-grid { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .masthead-title { font-size: 30px; }
+    .hero-title { font-size: 36px; }
+    nav { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div id="pageLoader">
+  <div class="loader-logo">Consumer News</div>
+  <div class="loader-tagline">Natural Justice · ನೈಸರ್ಗಿಕ ನ್ಯಾಯ</div>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar-fill"></div>
+  </div>
+  <div class="loader-dots">
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>Consumer Rights Are Citizen Rights</span>
+    <span>Natural Justice For Every Indian</span>
+    <span>RNI: KAR KAN/2022/83661 — Registered Monthly Publication</span>
+    <span>Consumer News — Voice of the People</span>
+    <span>Editor: Dr. Vinay Kumar S — Doctorate in Journalism</span>
+    <span>Citizen Consumer Council Trust — Protecting Your Rights</span>
+  </div>
+</div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div>
+    <div class="masthead-rni">RNI: KAR KAN / 2022 / 83661</div>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;color:#999;margin-top:4px;font-weight:600;">Monthly Publication · Bengaluru, Karnataka</div>
+  </div>
+  <div class="masthead-center">
+    <div class="masthead-logo-badge">
+      <span class="scales-icon">⚖️</span>
+      <div>
+        <div class="masthead-title">Consumer News</div>
+      </div>
+    </div>
+    <div class="masthead-subtitle">Voice of the Consumer</div>
+    <div class="masthead-tagline">NATURAL JUSTICE</div>
+  </div>
+  <div class="masthead-right">
+    <div style="margin-bottom:8px;">
+      <div class="lang-switcher" style="margin-left:auto;display:inline-flex;">
+        <button class="lang-btn active" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('kn')">ಕನ್ನಡ</button>
+      </div>
+    </div>
+    <div>📞 <a href="tel:+916361528300" style="color:inherit;text-decoration:none;">+91 63615 28300</a></div>
+    <div style="margin-top:4px;">Bengaluru, Karnataka</div>
+    <div style="margin-top:4px;color:var(--gold);font-weight:700;">Est. 2022</div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="active">Home</a>
+  <a href="#about">About</a>
+  <a href="#editor">Editor</a>
+  <a href="#credentials">Credentials</a>
+  <a href="#roles">Roles</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text fade-in">
+    <div class="hero-kicker">⚖️ Natural Justice · Consumer Rights</div>
+    <h1 class="hero-title" id="heroTitle">
+      Fighting For <em>Consumer Rights</em><br/>Across Karnataka
+    </h1>
+    <p class="hero-desc" id="heroDesc"></p>
+    <a href="#about" class="hero-btn">Read Our Mission →</a>
+  </div>
+  <div class="editor-card fade-in" style="transition-delay:0.2s">
+    <div class="editor-card-top">
+      <div class="editor-card-top-label">Editor-in-Chief</div>
+      <div class="editor-card-top-title">Consumer News</div>
+    </div>
+    <div class="editor-photo-wrap">
+      <div class="editor-photo-placeholder">👤</div>
+      <div class="editor-name">Dr. Vinay Kumar S.</div>
+      <div class="editor-designation">Editor · Consumer News</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;color:#aaa;letter-spacing:1px;margin-top:4px;">Doctorate in Journalism</div>
+    </div>
+    <div class="editor-card-footer">
+      <div class="editor-id">ID NO: CN-01</div>
+      <div class="editor-blood">🩸 Blood: O+ve</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO NEWS SLIDER -->
+<section class="news-slider-section">
+  <div class="news-slider-header">
+    <div class="live-badge">
+      <span class="live-dot"></span>
+      LIVE COVERAGE
+    </div>
+    <div class="news-slider-title">Latest from the Field</div>
+    <div class="slider-controls">
+      <button class="slider-arrow" id="sliderPrev">&#8592;</button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-arrow" id="sliderNext">&#8594;</button>
+    </div>
+  </div>
+  <div class="slider-track-wrap">
+    <div class="slider-track" id="sliderTrack">
+
+      <!-- SLIDE 1 -->
+      <div class="slide">
+        <div class="camera-frame">
+          <div class="camera-corner tl"></div>
+          <div class="camera-corner tr"></div>
+          <div class="camera-corner bl"></div>
+          <div class="camera-corner br"></div>
+          <div class="camera-rec"><span class="rec-dot"></span>REC</div>
+          <div class="camera-img-wrap">
+            <div class="slide-placeholder" style="background:linear-gradient(135deg,#1a1a2e,#C8181E);">
+              <div class="placeholder-icon">📰</div>
+              <div class="placeholder-text">Consumer News<br/>Field Report</div>
+            </div>
+          </div>
+          <div class="camera-hud">
+            <span>ISO 400</span><span>f/2.8</span><span>1/250s</span>
+          </div>
+        </div>
+        <div class="slide-caption">
+          <div class="slide-tag">Consumer Rights</div>
+          <div class="slide-headline">Bengaluru consumer forum awards ₹2.4 lakh compensation to fraud victim</div>
+          <div class="slide-meta">📍 Bengaluru &nbsp;·&nbsp; Consumer News Bureau</div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="slide">
+        <div class="camera-frame">
+          <div class="camera-corner tl"></div>
+          <div class="camera-corner tr"></div>
+          <div class="camera-corner bl"></div>
+          <div class="camera-corner br"></div>
+          <div class="camera-rec"><span class="rec-dot"></span>REC</div>
+          <div class="camera-img-wrap">
+            <div class="slide-placeholder" style="background:linear-gradient(135deg,#0d3b1e,#C9960A);">
+              <div class="placeholder-icon">⚖️</div>
+              <div class="placeholder-text">Natural Justice<br/>in Action</div>
+            </div>
+          </div>
+          <div class="camera-hud">
+            <span>ISO 200</span><span>f/4.0</span><span>1/500s</span>
+          </div>
+        </div>
+        <div class="slide-caption">
+          <div class="slide-tag">Natural Justice</div>
+          <div class="slide-headline">Karnataka high court upholds consumer council petition on mis-selling of insurance</div>
+          <div class="slide-meta">📍 Karnataka &nbsp;·&nbsp; Legal Correspondent</div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="slide">
+        <div class="camera-frame">
+          <div class="camera-corner tl"></div>
+          <div class="camera-corner tr"></div>
+          <div class="camera-corner bl"></div>
+          <div class="camera-corner br"></div>
+          <div class="camera-rec"><span class="rec-dot"></span>REC</div>
+          <div class="camera-img-wrap">
+            <div class="slide-placeholder" style="background:linear-gradient(135deg,#1a0a2e,#4A90D9);">
+              <div class="placeholder-icon">🏛️</div>
+              <div class="placeholder-text">Citizen Council<br/>Trust Event</div>
+            </div>
+          </div>
+          <div class="camera-hud">
+            <span>ISO 800</span><span>f/1.8</span><span>1/60s</span>
+          </div>
+        </div>
+        <div class="slide-caption">
+          <div class="slide-tag">Event Coverage</div>
+          <div class="slide-headline">Citizen Consumer Council Trust hosts awareness drive in North Bengaluru</div>
+          <div class="slide-meta">📍 Yeshwanthpur, Bengaluru &nbsp;·&nbsp; Staff Reporter</div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4 -->
+      <div class="slide">
+        <div class="camera-frame">
+          <div class="camera-corner tl"></div>
+          <div class="camera-corner tr"></div>
+          <div class="camera-corner bl"></div>
+          <div class="camera-corner br"></div>
+          <div class="camera-rec"><span class="rec-dot"></span>REC</div>
+          <div class="camera-img-wrap">
+            <div class="slide-placeholder" style="background:linear-gradient(135deg,#1a1000,#8B0F13);">
+              <div class="placeholder-icon">📣</div>
+              <div class="placeholder-text">Press Freedom<br/>Report 2024</div>
+            </div>
+          </div>
+          <div class="camera-hud">
+            <span>ISO 100</span><span>f/5.6</span><span>1/1000s</span>
+          </div>
+        </div>
+        <div class="slide-caption">
+          <div class="slide-tag">Press Freedom</div>
+          <div class="slide-headline">Small & medium newspapers demand fair ad policy from state government</div>
+          <div class="slide-meta">📍 Karnataka State &nbsp;·&nbsp; Editorial Desk</div>
+        </div>
+      </div>
+
+    </div><!-- end slider-track -->
+  </div>
+</section>
+
+<!-- FOLLOW US SOCIAL BAR -->
+<div class="social-bar">
+  <div class="social-bar-label">📲 Follow Us</div>
+  <a href="#" class="social-btn fb" target="_blank" title="Facebook">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    <span>Facebook</span>
+  </a>
+  <a href="#" class="social-btn insta" target="_blank" title="Instagram">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    <span>Instagram</span>
+  </a>
+  <a href="#" class="social-btn yt" target="_blank" title="YouTube">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+    <span>YouTube</span>
+  </a>
+  <a href="#" class="social-btn wa-channel" target="_blank" title="WhatsApp Channel">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>WhatsApp Channel</span>
+  </a>
+</div>
+
+<!-- ABOUT -->
+<section class="section section-alt" id="about">
+  <div class="section-header fade-in">
+    <div>
+      <div class="section-label">Who We Are</div>
+      <div class="section-title">About Consumer News</div>
+    </div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-text fade-in" id="aboutText">
+      <p id="aboutP1"></p>
+      <p id="aboutP2"></p>
+      <p id="aboutP3"></p>
+      <p id="aboutP4"></p>
+    </div>
+    <div class="about-mission fade-in" style="transition-delay:0.15s">
+      <div class="about-mission-title">⚖️ Our Mission</div>
+      <p>
+        To educate, inform, and empower every consumer in Karnataka with accurate, fearless, and fair journalism rooted in the principles of natural justice.
+      </p>
+      <div class="mission-fact">
+        <span class="mission-fact-icon">📰</span>
+        Monthly registered newspaper since 2022
+      </div>
+      <div class="mission-fact">
+        <span class="mission-fact-icon">🏛️</span>
+        Linked to Citizen Consumer Council Trust
+      </div>
+      <div class="mission-fact">
+        <span class="mission-fact-icon">⚖️</span>
+        Natural Justice as editorial principle
+      </div>
+      <div class="mission-fact">
+        <span class="mission-fact-icon">🗣️</span>
+        Voice for unheard consumer grievances
+      </div>
+      <div class="mission-fact">
+        <span class="mission-fact-icon">🇮🇳</span>
+        Serving Karnataka, impacting India
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDITOR -->
+<section class="section" id="editor">
+  <div class="section-header fade-in">
+    <div>
+      <div class="section-label">Meet the Editor</div>
+      <div class="section-title">Dr. Vinay Kumar S.</div>
+    </div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="about-grid fade-in">
+    <div class="about-text">
+      <p>
+        <strong>Dr. Vinay Kumar S.</strong> is a distinguished journalist, legal mind, and consumer rights champion with decades of experience spanning journalism, banking, law, and public advocacy.
+      </p>
+      <p>
+        He holds a <strong>Doctorate in Journalism</strong> and brings to the role a rare combination of financial acumen (CAIIB — Chartered Associate of Indian Institute of Bankers, Mumbai) and legal training (B.Com, LLB) that sets Consumer News apart in its depth of analysis.
+      </p>
+      <p>
+        As Founder and Managing Trustee of the <strong>Citizen Consumer Council Trust</strong>, Dr. Vinay Kumar has directly assisted hundreds of consumers in filing complaints, seeking redressal, and understanding their rights under Indian consumer law.
+      </p>
+      <p>
+        He also holds leadership positions in multiple press and journalist associations, including serving as <strong>President of the Newspaper Employees Working Journalist Union</strong> and Vice President of <strong>Karnataka Patrakartra Sanghatanegala Maha Okkuta</strong>.
+      </p>
+    </div>
+    <div style="background:#F5F0EC;padding:28px;border-radius:4px;border-top:4px solid var(--gold);" class="fade-in" style="transition-delay:0.15s">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:14px;">Qualifications</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #DDD;">
+          <span style="font-size:20px;flex-shrink:0">🎓</span>
+          <div>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--dark);">Doctorate in Journalism</div>
+            <div style="font-size:12px;color:var(--muted);">PhD level qualification in media & journalism</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #DDD;">
+          <span style="font-size:20px;flex-shrink:0">⚖️</span>
+          <div>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--dark);">B.Com · LLB</div>
+            <div style="font-size:12px;color:var(--muted);">Commerce and Law graduate</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #DDD;">
+          <span style="font-size:20px;flex-shrink:0">🏦</span>
+          <div>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--dark);">CAIIB — Mumbai</div>
+            <div style="font-size:12px;color:var(--muted);">Chartered Associate, Indian Institute of Bankers</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;">
+          <span style="font-size:20px;flex-shrink:0">📋</span>
+          <div>
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--dark);">DIRPM — Bhavan's Mumbai</div>
+            <div style="font-size:12px;color:var(--muted);">Diploma in Industrial Relations & Personnel Management</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="section section-alt" id="credentials">
+  <div class="section-header fade-in">
+    <div>
+      <div class="section-label">Experience & Expertise</div>
+      <div class="section-title">Core Credentials</div>
+    </div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="credentials-grid">
+    <div class="cred-card fade-in">
+      <div class="cred-icon">📰</div>
+      <div class="cred-title">Editor — Consumer News</div>
+      <div class="cred-desc">Founding Editor of Consumer News, a registered monthly newspaper (RNI: KAR KAN/2022/83661) dedicated to consumer awareness and natural justice.</div>
+    </div>
+    <div class="cred-card fade-in" style="transition-delay:0.1s">
+      <div class="cred-icon">🏛️</div>
+      <div class="cred-title">Founder & Managing Trustee</div>
+      <div class="cred-desc">Citizen Consumer Council Trust — a grassroots organization protecting consumer rights through legal aid, awareness drives, and public advocacy.</div>
+    </div>
+    <div class="cred-card fade-in" style="transition-delay:0.2s">
+      <div class="cred-icon">⚖️</div>
+      <div class="cred-title">Legal & Banking Background</div>
+      <div class="cred-desc">B.Com LLB combined with CAIIB (Mumbai) and DIRPM (Bhavan's) gives a unique edge in covering financial fraud, consumer law, and corporate accountability.</div>
+    </div>
+    <div class="cred-card fade-in" style="transition-delay:0.0s">
+      <div class="cred-icon">🗞️</div>
+      <div class="cred-title">Local Station Editor — Akrandan</div>
+      <div class="cred-desc">Local Station Editor for Akrandan Daily Newspaper, Bangalore — a Kannada-language daily with significant readership across Karnataka.</div>
+    </div>
+    <div class="cred-card fade-in" style="transition-delay:0.1s">
+      <div class="cred-icon">📡</div>
+      <div class="cred-title">State Secretary — ASMNI</div>
+      <div class="cred-desc">State Secretary of the Association of Small and Medium Newspapers of India — championing the rights and sustainability of independent press.</div>
+    </div>
+    <div class="cred-card fade-in" style="transition-delay:0.2s">
+      <div class="cred-icon">🎓</div>
+      <div class="cred-title">Doctorate in Journalism</div>
+      <div class="cred-desc">Academic foundation in journalism ethics, media law, and investigative reporting — bringing scholarly rigour to consumer news coverage.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES -->
+<section class="section section-dark" id="roles">
+  <div class="section-header fade-in">
+    <div>
+      <div class="section-label" style="color:var(--gold)">Leadership Positions</div>
+      <div class="section-title">Roles & Responsibilities</div>
+    </div>
+    <div class="section-rule" style="background:rgba(255,255,255,0.1)"></div>
+  </div>
+  <div class="roles-list fade-in">
+    <div class="role-item">
+      <div class="role-num">01</div>
+      <div>
+        <div class="role-title">Editor — Consumer News (Monthly Newspaper)</div>
+        <div class="role-org">RNI: KAR KAN/2022/83661 · Bengaluru, Karnataka</div>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="role-num">02</div>
+      <div>
+        <div class="role-title">Founder & Managing Trustee</div>
+        <div class="role-org">Citizen Consumer Council Trust</div>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="role-num">03</div>
+      <div>
+        <div class="role-title">President — Newspaper Employees Working Journalist Union</div>
+        <div class="role-org">Karnataka · Press Workers' Rights Organisation</div>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="role-num">04</div>
+      <div>
+        <div class="role-title">Vice President — Karnataka Patrakartra Sanghatanegala Maha Okkuta</div>
+        <div class="role-org">ಕರ್ನಾಟಕ ಪತ್ರಕರ್ತರ ಸಂಘಟನೆಗಳ ಮಹಾ ಒಕ್ಕೂಟ · Karnataka State Press Federation</div>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="role-num">05</div>
+      <div>
+        <div class="role-title">ಗೌರವ ಅಧ್ಯಕ್ಷರು — Honorary President</div>
+        <div class="role-org">ಅಖಿಲ ಕರ್ನಾಟಕ ಕಾರ್ಯನಿರತ ಪತ್ರಕರ್ತರ ಸಂಘ · All Karnataka Working Journalists Association</div>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="role-num">06</div>
+      <div>
+        <div class="role-title">State Secretary</div>
+        <div class="role-org">Association of Small and Medium Newspapers of India (ASMNI)</div>
+      </div>
+    </div>
+    <div class="role-item">
+      <div class="role-num">07</div>
+      <div>
+        <div class="role-title">Local Station Editor — Bangalore</div>
+        <div class="role-org">Akrandan Daily Newspaper · Kannada Language Daily</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-header fade-in">
+    <div>
+      <div class="section-label">Get in Touch</div>
+      <div class="section-title">Contact Us</div>
+    </div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="contact-grid fade-in">
+    <div class="contact-info">
+      <p style="font-size:15px;color:var(--muted);margin-bottom:24px;line-height:1.7;">
+        For news tips, consumer complaints, advertising inquiries, or press-related matters, reach out to the Consumer News editorial team.
+      </p>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-value"><a href="tel:+916361528300" style="color:inherit;text-decoration:none;">+91 63615 28300</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🗞️</div>
+        <div>
+          <div class="contact-label">Publication</div>
+          <div class="contact-value">Consumer News — Monthly Newspaper</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📋</div>
+        <div>
+          <div class="contact-label">RNI Registration</div>
+          <div class="contact-value">KAR KAN / 2022 / 83661</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Bengaluru, Karnataka, India</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🩸</div>
+        <div>
+          <div class="contact-label">Editor Blood Group</div>
+          <div class="contact-value" style="color:var(--red);">O Positive (O+ve)</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form fade-in" style="transition-delay:0.15s">
+      <div class="contact-form-title">Send a Message</div>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Full name" />
+      </div>
+      <div class="form-group">
+        <label>Phone / Email</label>
+        <input type="text" placeholder="Contact details" />
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" placeholder="e.g. Consumer Complaint, Advertising, Press" />
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Describe your query or consumer complaint..."></textarea>
+      </div>
+      <button class="form-submit" onclick="alert('Thank you! We will get back to you shortly.')">Send Message ➤</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Consumer News</div>
+  <div class="footer-sub">Natural Justice · Voice of the Consumer · Bengaluru, Karnataka</div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#editor">Editor</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#roles">Roles</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">
+    © 2024 Consumer News · RNI: KAR KAN/2022/83661 · Editor: Dr. Vinay Kumar S. · All Rights Reserved
+  </div>
+  <div class="footer-dev">
+    Designed &amp; Developed by&nbsp;
+    <a href="https://www.trustwork.co.in" target="_blank">www.trustwork.co.in</a>
+    &nbsp;|&nbsp;
+    <a href="tel:+919353010107">+91 93530 10107</a>
+    &nbsp;|&nbsp;
+    <a href="mailto:support@trustwork.co.in">support@trustwork.co.in</a>
+  </div>
+</footer>
+
+<!-- SCROLL PROGRESS BAR -->
+<div id="scrollProgress"></div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-btns">
+  <a href="https://wa.me/916361528300?text=Hello%20Consumer%20News%2C%20I%20would%20like%20to%20get%20in%20touch." target="_blank" class="float-btn whatsapp">
+    <div class="float-btn-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </div>
+    <div class="float-btn-label">WhatsApp Us</div>
+  </a>
+  <a href="tel:+916361528300" class="float-btn call">
+    <div class="float-btn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    </div>
+    <div class="float-btn-label">+91 63615 28300</div>
+  </a>
+  <a href="sms:+916361528300" class="float-btn sms">
+    <div class="float-btn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+    </div>
+    <div class="float-btn-label">Send SMS</div>
+  </a>
+</div>
+
+<script>
+  // ── PAGE LOADER ──
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('pageLoader').classList.add('hidden');
+    }, 2000);
+  });
+
+  // ── HERO WORD-HOVER ──
+  (function() {
+    const heroTitle = document.getElementById('heroTitle');
+    if (!heroTitle) return;
+    heroTitle.innerHTML = heroTitle.innerHTML.replace(
+      /Fighting For/,
+      'Fighting For'
+    );
+    // Wrap each plain-text word in a span for hover
+    heroTitle.childNodes.forEach(node => {
+      if (node.nodeType === 3) { // text node
+        const words = node.textContent.split(/(\s+)/);
+        const frag = document.createDocumentFragment();
+        words.forEach(w => {
+          if (w.trim()) {
+            const span = document.createElement('span');
+            span.className = 'word';
+            span.textContent = w;
+            frag.appendChild(span);
+          } else {
+            frag.appendChild(document.createTextNode(w));
+          }
+        });
+        node.parentNode.replaceChild(frag, node);
+      }
+    });
+    // Also wrap words inside <em> and <br>
+    heroTitle.querySelectorAll('em').forEach(em => {
+      const words = em.textContent.split(/(\s+)/);
+      em.innerHTML = words.map(w => w.trim()
+        ? `<span class="word" style="color:var(--gold)">${w}</span>`
+        : w
+      ).join('');
+    });
+  })();
+
+  // ── TYPEWRITER ENGINE ──
+  function typewriter(el, text, speed, delay, callback) {
+    if (!el) return;
+    el.innerHTML = '';
+    const cursor = document.createElement('span');
+    cursor.className = 'typewriter-cursor';
+    el.appendChild(cursor);
+    let i = 0;
+    setTimeout(() => {
+      const interval = setInterval(() => {
+        if (i < text.length) {
+          el.insertBefore(document.createTextNode(text[i]), cursor);
+          i++;
+        } else {
+          clearInterval(interval);
+          cursor.style.display = 'none';
+          if (callback) callback();
+        }
+      }, speed);
+    }, delay);
+  }
+
+  // Hero desc typewriter — starts after loader fades (2.2s)
+  const heroDescText = 'Consumer News is a registered monthly publication dedicated to informing, educating, and empowering consumers across Karnataka. We believe every citizen deserves natural justice — and we give it a voice.';
+  typewriter(document.getElementById('heroDesc'), heroDescText, 22, 2300);
+
+  // About section typewriters — triggered on scroll into view
+  const aboutTexts = [
+    'Consumer News is a registered monthly newspaper published from Bengaluru, Karnataka (RNI: KAR KAN/2022/83661). Founded with a singular mission — to be the voice of the consumer — we cover stories that matter to everyday citizens, from market fraud to civic rights violations.',
+    'Our publication works in close coordination with the Citizen Consumer Council Trust, a registered organization committed to protecting consumer interests through awareness, legal support, and grassroots outreach.',
+    'We believe that Natural Justice is not a privilege — it is a fundamental right of every Indian citizen. Our pages give voice to those who have been wronged, misled, or deprived of their entitled rights.',
+    'With a network spanning Karnataka and affiliated with national press bodies, Consumer News is read by citizens, activists, legal professionals, and policymakers who care about a fair and transparent marketplace.'
+  ];
+  const aboutIds = ['aboutP1','aboutP2','aboutP3','aboutP4'];
+  let aboutTyped = false;
+
+  const aboutObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !aboutTyped) {
+        aboutTyped = true;
+        aboutIds.forEach((id, i) => {
+          typewriter(document.getElementById(id), aboutTexts[i], 14, i * 900);
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const aboutSection = document.getElementById('about');
+  if (aboutSection) aboutObserver.observe(aboutSection);
+
+  // ── LANGUAGE DATA ──
+  const translations = {
+    en: {
+      nav_home: 'Home', nav_about: 'About', nav_editor: 'Editor',
+      nav_cred: 'Credentials', nav_roles: 'Roles', nav_contact: 'Contact',
+      hero_kicker: '⚖️ Natural Justice · Consumer Rights',
+      hero_title: 'Fighting For <em>Consumer Rights</em> Across Karnataka',
+      hero_desc: 'Consumer News is a registered monthly publication dedicated to informing, educating, and empowering consumers across Karnataka. We believe every citizen deserves natural justice — and we give it a voice.',
+      hero_btn: 'Read Our Mission →',
+      about_label: 'Who We Are', about_title: 'About Consumer News',
+      editor_label: 'Meet the Editor', editor_title: 'Dr. Vinay Kumar S.',
+      cred_label: 'Experience & Expertise', cred_title: 'Core Credentials',
+      roles_label: 'Leadership Positions', roles_title: 'Roles & Responsibilities',
+      contact_label: 'Get in Touch', contact_title: 'Contact Us',
+      ticker: ['Consumer Rights Are Citizen Rights','Natural Justice For Every Indian','RNI: KAR KAN/2022/83661 — Registered Monthly Publication','Consumer News — Voice of the People','Editor: Dr. Vinay Kumar S — Doctorate in Journalism','Citizen Consumer Council Trust — Protecting Your Rights'],
+      mission_title: '⚖️ Our Mission',
+      mission_text: 'To educate, inform, and empower every consumer in Karnataka with accurate, fearless, and fair journalism rooted in the principles of natural justice.',
+    },
+    kn: {
+      nav_home: 'ಮುಖಪುಟ', nav_about: 'ನಮ್ಮ ಬಗ್ಗೆ', nav_editor: 'ಸಂಪಾದಕರು',
+      nav_cred: 'ಅರ್ಹತೆಗಳು', nav_roles: 'ಹುದ್ದೆಗಳು', nav_contact: 'ಸಂಪರ್ಕ',
+      hero_kicker: '⚖️ ನೈಸರ್ಗಿಕ ನ್ಯಾಯ · ಗ್ರಾಹಕ ಹಕ್ಕುಗಳು',
+      hero_title: 'ಕರ್ನಾಟಕದಾದ್ಯಂತ <em>ಗ್ರಾಹಕ ಹಕ್ಕುಗಳಿಗಾಗಿ</em> ಹೋರಾಟ',
+      hero_desc: 'ಕನ್ಸ್ಯೂಮರ್ ನ್ಯೂಸ್ ಒಂದು ನೋಂದಾಯಿತ ಮಾಸಿಕ ಪ್ರಕಟಣೆಯಾಗಿದ್ದು, ಕರ್ನಾಟಕದ ಗ್ರಾಹಕರಿಗೆ ಮಾಹಿತಿ, ಶಿಕ್ಷಣ ಮತ್ತು ಸಬಲೀಕರಣ ನೀಡಲು ಸಮರ್ಪಿತವಾಗಿದೆ. ಪ್ರತಿ ನಾಗರಿಕನಿಗೂ ನೈಸರ್ಗಿಕ ನ್ಯಾಯ ದೊರೆಯಬೇಕೆಂದು ನಾವು ನಂಬುತ್ತೇವೆ.',
+      hero_btn: 'ನಮ್ಮ ಧ್ಯೇಯ ಓದಿ →',
+      about_label: 'ನಾವು ಯಾರು', about_title: 'ಕನ್ಸ್ಯೂಮರ್ ನ್ಯೂಸ್ ಬಗ್ಗೆ',
+      editor_label: 'ಸಂಪಾದಕರನ್ನು ಭೇಟಿ ಮಾಡಿ', editor_title: 'ಡಾ. ವಿನಯ್ ಕುಮಾರ್ ಎಸ್.',
+      cred_label: 'ಅನುಭವ ಮತ್ತು ಪರಿಣತಿ', cred_title: 'ಮೂಲ ಅರ್ಹತೆಗಳು',
+      roles_label: 'ನಾಯಕತ್ವ ಸ್ಥಾನಗಳು', roles_title: 'ಹುದ್ದೆಗಳು ಮತ್ತು ಜವಾಬ್ದಾರಿಗಳು',
+      contact_label: 'ಸಂಪರ್ಕಿಸಿ', contact_title: 'ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ',
+      ticker: ['ಗ್ರಾಹಕ ಹಕ್ಕುಗಳೇ ನಾಗರಿಕ ಹಕ್ಕುಗಳು','ಪ್ರತಿ ಭಾರತೀಯನಿಗೆ ನೈಸರ್ಗಿಕ ನ್ಯಾಯ','RNI: KAR KAN/2022/83661 — ನೋಂದಾಯಿತ ಮಾಸಿಕ','ಕನ್ಸ್ಯೂಮರ್ ನ್ಯೂಸ್ — ಜನರ ಧ್ವನಿ','ಸಂಪಾದಕರು: ಡಾ. ವಿನಯ್ ಕುಮಾರ್ ಎಸ್ — ಪತ್ರಿಕೋದ್ಯಮದಲ್ಲಿ ಡಾಕ್ಟರೇಟ್','ನಾಗರಿಕ ಗ್ರಾಹಕ ಪರಿಷತ್ತು ಟ್ರಸ್ಟ್ — ನಿಮ್ಮ ಹಕ್ಕುಗಳ ರಕ್ಷಣೆ'],
+      mission_title: '⚖️ ನಮ್ಮ ಧ್ಯೇಯ',
+      mission_text: 'ನ್ಯಾಯ, ನಿರ್ಭಯ ಮತ್ತು ನ್ಯಾಯಯುತ ಪತ್ರಿಕೋದ್ಯಮದ ಮೂಲಕ ಕರ್ನಾಟಕದ ಪ್ರತಿ ಗ್ರಾಹಕನನ್ನು ಶಿಕ್ಷಿತ, ಮಾಹಿತಿ ಮತ್ತು ಸಬಲೀಕರಣಗೊಳಿಸುವುದು.',
+    }
+  };
+
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    const t = translations[lang];
+
+    // nav
+    const navLinks = document.querySelectorAll('nav a');
+    const navKeys = ['nav_home','nav_about','nav_editor','nav_cred','nav_roles','nav_contact'];
+    navLinks.forEach((a, i) => { if(navKeys[i]) a.textContent = t[navKeys[i]]; });
+
+    // hero
+    document.querySelector('.hero-kicker').textContent = t.hero_kicker;
+    document.querySelector('.hero-title').innerHTML = t.hero_title;
+    document.querySelector('.hero-desc').textContent = t.hero_desc;
+    document.querySelector('.hero-btn').textContent = t.hero_btn;
+
+    // section labels & titles
+    const labels = document.querySelectorAll('.section-label');
+    const titles = document.querySelectorAll('.section-title');
+    const labelKeys = ['about_label','editor_label','cred_label','roles_label','contact_label'];
+    const titleKeys = ['about_title','editor_title','cred_title','roles_title','contact_title'];
+    labels.forEach((el, i) => { if(labelKeys[i] && t[labelKeys[i]]) el.textContent = t[labelKeys[i]]; });
+    titles.forEach((el, i) => { if(titleKeys[i] && t[titleKeys[i]]) el.textContent = t[titleKeys[i]]; });
+
+    // mission
+    document.querySelector('.about-mission-title').textContent = t.mission_title;
+    document.querySelector('.about-mission p').textContent = t.mission_text;
+
+    // ticker
+    const tickerEl = document.querySelector('.ticker-inner');
+    tickerEl.innerHTML = t.ticker.map(s => `<span>${s}</span>`).join('');
+
+    // lang buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('onclick').includes(`'${lang}'`));
+    });
+
+    // html lang
+    document.documentElement.lang = lang === 'kn' ? 'kn' : 'en';
+  }
+
+  // ── PHOTO SLIDER ──
+  (function() {
+    const track = document.getElementById('sliderTrack');
+    const dotsWrap = document.getElementById('sliderDots');
+    const slides = track ? track.querySelectorAll('.slide') : [];
+    const total = slides.length;
+    if (!total) return;
+
+    let current = 0;
+    let autoTimer;
+    const visibleCount = () => window.innerWidth < 768 ? 1 : window.innerWidth < 1100 ? 2 : 3;
+
+    // Build dots
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('button');
+      d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    }
+
+    function updateDots() {
+      dotsWrap.querySelectorAll('.slider-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function goTo(idx) {
+      const vis = visibleCount();
+      const maxIdx = Math.max(0, total - vis);
+      current = Math.max(0, Math.min(idx, maxIdx));
+      const slideW = slides[0].offsetWidth + 24; // gap=24
+      track.style.transform = `translateX(-${current * slideW}px)`;
+      updateDots();
+    }
+
+    document.getElementById('sliderNext').addEventListener('click', () => {
+      const vis = visibleCount();
+      goTo(current + 1 >= total - vis + 1 ? 0 : current + 1);
+      resetAuto();
+    });
+
+    document.getElementById('sliderPrev').addEventListener('click', () => {
+      const vis = visibleCount();
+      const maxIdx = Math.max(0, total - vis);
+      goTo(current - 1 < 0 ? maxIdx : current - 1);
+      resetAuto();
+    });
+
+    function autoSlide() {
+      const vis = visibleCount();
+      goTo(current + 1 >= total - vis + 1 ? 0 : current + 1);
+    }
+
+    function resetAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(autoSlide, 4000);
+    }
+
+    autoTimer = setInterval(autoSlide, 4000);
+    window.addEventListener('resize', () => goTo(current));
+  })();
+
+  // ── SCROLL PROGRESS BAR ──
+  const progressBar = document.getElementById('scrollProgress');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  });
+
+  // ── FADE-IN ON SCROLL ──
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  // ── ACTIVE NAV ON SCROLL ──
+  const sections = document.querySelectorAll('section[id]');
+  const navLinksAll = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.id;
+    });
+    navLinksAll.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>
